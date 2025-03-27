@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+header {
+    height: 100px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    z-index: 1000;
+
+    background-color: #225a76e7;
+}
+
+header > a > img.hlogo {
+    height: 80px;
+}
+
+header > nav {
+    height: 100%;
+    width: 700px;
+    margin-left: 20px;
+}
+
+header > nav > ul {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+header > nav > ul > li {
+    height: 100%;
+}
+
+header > nav > ul > li > a {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    color: #FFF;
+
+    transition: 0.3s;
+}
+
+header > nav > ul > li > a:hover {
+    color: #3FCEF6;
+    border-bottom: 3px solid #3FCEF6;
+}
