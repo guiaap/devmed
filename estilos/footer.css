@@ -4,16 +4,24 @@ footer {
     width: 100%;
 
     padding-top: 50px;
-    padding-bottom: 50px;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
     background-color: #225A76;
 }
 
-footer > div.logoContainer {
+footer > div.footerContent {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > div.footerContent > div.logoContainer {
     height: 100%;
     width: 500px;
 
@@ -22,12 +30,12 @@ footer > div.logoContainer {
     align-items: center;
 }
 
-footer > div.logoContainer > img {
+footer > div.footerContent > div.logoContainer > img {
     height: 120px;
     margin-right: 50px;
 }
 
-footer > div.infoContainer {
+footer > div.footerContent > div.infoContainer {
     height: 100%;
     width: 500px;
 
@@ -39,13 +47,13 @@ footer > div.infoContainer {
     align-items: flex-start;
 }
 
-footer > div.infoContainer > h2 {
+footer > div.footerContent > div.infoContainer > h2 {
     font-size: 1.7em;
     color: #FFF;
     margin-bottom: 5px;
 }
 
-footer > div.infoContainer > hr {
+footer > div.footerContent > div.infoContainer > hr {
     background-color: #3FCEF6;
     height: 4px;
     width: 50px;
@@ -53,18 +61,18 @@ footer > div.infoContainer > hr {
     margin-bottom: 20px;
 }
 
-footer > div.infoContainer > ul {
+footer > div.footerContent > div.infoContainer > ul {
     list-style-type: none;
     color: #FFF;
 }
 
-footer > div.infoContainer > h3 {
+footer > div.footerContent > div.infoContainer > h3 {
     margin-top: 20px;
     color: #FFF;
 }
 
 
-footer > div.infoContainer > div.redesSociais {
+footer > div.footerContent > div.infoContainer > div.redesSociais {
     margin-top: 5px;
     
     display: flex;
@@ -73,14 +81,23 @@ footer > div.infoContainer > div.redesSociais {
     
 }
 
-footer > div.infoContainer > div.redesSociais > a {
+footer > div.footerContent > div.infoContainer > div.redesSociais > a {
     height: 30px;
     margin-right: 10px;
     overflow: hidden;
 }
 
-footer > div.infoContainer > div.redesSociais > a > img {
+footer > div.footerContent > div.infoContainer > div.redesSociais > a > img {
     max-height: 100%;
     max-width: 100%;
     cursor: pointer;
 }
+
+footer > div.creditos {
+    width: 100%;
+    margin-top: 30px;
+    padding: 10px;
+    color: #FFF;
+    text-align: center;
+}
+
