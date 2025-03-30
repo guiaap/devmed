@@ -7,7 +7,7 @@
     }
 
     header > a > img.hlogo {
-        height: 70px;
+        height: 60px;
     }
 
     header > nav {
@@ -26,6 +26,7 @@
 
     main > section#inicio > div.textContainer > h1 {
         font-size: 2.5em;
+        margin-bottom: 10px;
     }
 
     main > section#inicio > div.textContainer > p {
@@ -56,7 +57,7 @@
     }
 
     footer {
-        padding-top: 30px;
+        padding-top: 20px;
     }
 
     footer > div.footerContent {
@@ -82,8 +83,7 @@
     }
 
     footer > div.footerContent > div.logoContainer > img {
-        margin-right: 0;
-        height: 90px;
+       display: none;
     }
 
 }

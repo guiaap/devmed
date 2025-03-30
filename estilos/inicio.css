@@ -27,6 +27,7 @@ main > section#inicio > div.textContainer > h1 {
 
 main > section#inicio > div.textContainer > p {
     font-size: 1.2em;
+    font-weight: 500;
     text-align: justify;
     color: #225A76;
 }
