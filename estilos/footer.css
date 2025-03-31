@@ -101,3 +101,7 @@ footer > div.creditos {
     text-align: center;
 }
 
+footer > div.creditos > small {
+    font-size: 0.7em;
+}
+

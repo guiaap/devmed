@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-main > section#especialidades {
+section#especialidades {
     width: 100%;
 
     display: flex;
@@ -9,14 +9,14 @@ main > section#especialidades {
     justify-content: center;
 }
 
-main > section#especialidades > h2 {
+section#especialidades > h2 {
     color: #225A76;
     font-size: 1.7em;
     margin-top: 40px;
     margin-bottom: 10px;
 }
 
-main > section#especialidades > hr {
+section#especialidades > hr {
     background-color: #3FCEF6;
     height: 4px;
     width: 70px;
@@ -25,7 +25,7 @@ main > section#especialidades > hr {
 }
 
 
-main > section#especialidades > div.cardContainer {
+section#especialidades > div.cardContainer {
     width: 90%;
 
     display: flex;
@@ -36,12 +36,12 @@ main > section#especialidades > div.cardContainer {
     margin-bottom: 50px;
 }
 
-main > section#especialidades > div.cardContainer > a {
+section#especialidades > div.cardContainer > a {
     text-decoration: none;
     color: #225A76;
 }
 
-main > section#especialidades > div.cardContainer > a > div.card {
+section#especialidades > div.cardContainer > a > div.card {
     height: 100px;
     width: 300px;
 
@@ -59,12 +59,12 @@ main > section#especialidades > div.cardContainer > a > div.card {
     transition: 0.3s;
 }
 
-main > section#especialidades > div.cardContainer > a > div.card:hover {
+section#especialidades > div.cardContainer > a > div.card:hover {
     transform: translateY(-5px);
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.485);
 }
 
-main > section#especialidades > div.cardContainer > a > div.card > div.cardIcon {
+section#especialidades > div.cardContainer > a > div.card > div.cardIcon {
     height: 100%;
     width: 90px;
 
@@ -74,11 +74,11 @@ main > section#especialidades > div.cardContainer > a > div.card > div.cardIcon 
 }
 
 
-main > section#especialidades > div.cardContainer > a > div.card > div.cardIcon > img {
+section#especialidades > div.cardContainer > a > div.card > div.cardIcon > img {
     height: 30px;
 }
 
-main > section#especialidades > div.cardContainer > a > div.card > div.cardText {
+section#especialidades > div.cardContainer > a > div.card > div.cardText {
     height: 100%;
 
     display: flex;
