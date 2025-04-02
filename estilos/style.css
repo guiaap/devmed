@@ -1,0 +1,454 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+    overflow-x: hidden;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+div.container {
+    max-width: 2500px;
+    width: 100%;
+    margin: auto;
+}
+
+header {
+    height: 100px;
+    width: 100%;
+    max-width: inherit;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    z-index: 1000;
+
+    background-color: #225a76e7;
+}
+
+header > a > img.hlogo {
+    height: 80px;
+}
+
+header > nav {
+    height: 100%;
+    width: 700px;
+    margin-left: 20px;
+}
+
+header > nav > ul {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+header > nav > ul > li {
+    height: 100%;
+}
+
+header > nav > ul > li > a {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    color: #FFF;
+
+    transition: 0.3s;
+}
+
+header > nav > ul > li > a:hover {
+    color: #3FCEF6;
+    border-bottom: 3px solid #3FCEF6;
+}
+
+section#inicio {
+    height: 650px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+    background-image: url(../imagens/clinica.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+section#inicio > div.textContainer {
+    width: 800px;
+    margin-left: 10%;
+}
+
+section#inicio > div.textContainer > h1 {
+    font-size: 3em;
+    color: #225A76;
+}
+
+section#inicio > div.textContainer > p {
+    font-size: 1.2em;
+    font-weight: 500;
+    text-align: justify;
+    color: #225A76;
+}
+
+section#especialidades {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section#especialidades > h2 {
+    color: #225A76;
+    font-size: 1.7em;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+section#especialidades > hr {
+    background-color: #3FCEF6;
+    height: 4px;
+    width: 70px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+
+section#especialidades > div.cardContainer {
+    width: 90%;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 50px;
+}
+
+section#especialidades > div.cardContainer > a {
+    text-decoration: none;
+    color: #225A76;
+}
+
+section#especialidades > div.cardContainer > a > div.card {
+    height: 100px;
+    width: 300px;
+
+    margin: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+    background-color: #EFF1F3;
+    border: 1px solid #225A76;
+    border-radius: 20px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.312);
+
+    transition: 0.3s;
+}
+
+section#especialidades > div.cardContainer > a > div.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.485);
+}
+
+section#especialidades > div.cardContainer > a > div.card > div.cardIcon {
+    height: 100%;
+    width: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+section#especialidades > div.cardContainer > a > div.card > div.cardIcon > img {
+    height: 30px;
+}
+
+section#especialidades > div.cardContainer > a > div.card > div.cardText {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: left;  
+}
+
+section#localizacao {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #d7f2f7;
+}
+
+section#localizacao > h2 {
+    font-size: 1.7em;
+    color: #225A76;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+section#localizacao > hr {
+    background-color: #3FCEF6;
+    height: 4px;
+    width: 70px;
+    border: none;
+    margin-bottom: 30px;
+}
+
+section#localizacao > p {
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+section#localizacao > div.mapContainer {
+    width: 1000px;
+    height: 300px;
+    margin-bottom: 50px;
+    border: 2px solid #225A76;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.288);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+section#localizacao > div.mapContainer > iframe {
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+
+footer {
+    width: 100%;
+
+    padding-top: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #225A76;
+}
+
+footer > div.footerContent {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > div.footerContent > div.logoContainer {
+    height: 100%;
+    width: 500px;
+
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+footer > div.footerContent > div.logoContainer > img {
+    height: 120px;
+    margin-right: 50px;
+}
+
+footer > div.footerContent > div.infoContainer {
+    height: 100%;
+    width: 500px;
+
+    padding-left: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+footer > div.footerContent > div.infoContainer > h2 {
+    font-size: 1.7em;
+    color: #FFF;
+    margin-bottom: 5px;
+}
+
+footer > div.footerContent > div.infoContainer > hr {
+    background-color: #3FCEF6;
+    height: 4px;
+    width: 50px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+footer > div.footerContent > div.infoContainer > ul {
+    list-style-type: none;
+    color: #FFF;
+}
+
+footer > div.footerContent > div.infoContainer > h3 {
+    margin-top: 20px;
+    color: #FFF;
+}
+
+
+footer > div.footerContent > div.infoContainer > div.redesSociais {
+    margin-top: 5px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+footer > div.footerContent > div.infoContainer > div.redesSociais > a {
+    height: 30px;
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+footer > div.footerContent > div.infoContainer > div.redesSociais > a > img {
+    max-height: 100%;
+    max-width: 100%;
+    cursor: pointer;
+}
+
+footer > div.creditos {
+    width: 100%;
+    margin-top: 30px;
+    padding: 10px;
+    color: #FFF;
+    text-align: center;
+}
+
+footer > div.creditos > small {
+    font-size: 0.7em;
+}
+
+a.whatsappButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 1000;  
+
+    overflow-y: hidden;
+}
+
+a.whatsappButton > img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+
+    header {
+        height: 60px;
+    }
+
+    header > a > img.hlogo {
+        height: 50px;
+    }
+
+    header > nav {
+        display: none;
+    }
+
+    section#inicio {
+        justify-content: center;
+        height: 450px;
+    }
+
+    section#inicio > div.textContainer {
+        max-width: 90vw;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    section#inicio > div.textContainer > h1 {
+        margin-bottom: 10px;
+        font-size: 2.5em;
+    }
+
+    section#inicio > div.textContainer > p {
+        font-size: 1em;
+    }
+
+    section#especialidades > h2 {
+        margin-top: 30px;
+        font-size: 1.5em;
+    }
+
+    section#especialidades > div.cardContainer {
+        margin-bottom: 30px;
+    }
+
+    section#especialidades > div.cardContainer > a > div.card {
+        height: 60px;
+        width: 90vw;
+        margin: 5px 0px;
+    }
+
+    section#localizacao > h2 {
+        margin-top: 30px;
+        font-size: 1.5em;
+    }
+
+    section#localizacao > p {
+        max-width: 90%;
+        font-size: 1em;
+        text-align: center;
+    }
+
+    section#localizacao > div.mapContainer {
+        width: 90%;
+        margin-bottom: 30px;
+    }
+
+    footer {
+        padding-top: 0px;
+    }
+
+    footer > div.footerContent {
+        flex-direction: column;
+    }
+
+    footer > div.footerContent > div.logoContainer {
+        display: none;
+    }
+
+    footer > div.footerContent > div.infoContainer {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0;
+
+    }
+
+    footer > div.footerContent > div.infoContainer > h2 {
+        margin-top: 30px;
+    }
+
+    footer > div.footerContent > div.infoContainer > ul {
+        text-align: center;
+    }
+    
+}
