@@ -3,84 +3,100 @@
 * {
     margin: 0;
     padding: 0;
-
     box-sizing: border-box;
-    overflow-x: hidden;
-
     font-family: 'Montserrat', sans-serif;
 }
 
-div.container {
-    max-width: 2500px;
+html {
+    font-size: 62.5%;
+}
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+body {
+    max-width: 2000px;
     width: 100%;
     margin: auto;
 }
 
 header {
-    height: 100px;
+    height: 8rem;
     width: 100%;
-    max-width: inherit;
-    margin: auto;
-
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    position: fixed;
-    z-index: 1000;
-
     background-color: #225a76e7;
 }
 
-header > a > img.hlogo {
-    height: 80px;
+.logo {
+    height: 7rem;
+    width: 17rem;
 }
 
-header > nav {
+.nav-bar {
     height: 100%;
-    width: 700px;
-    margin-left: 20px;
+    width: 70rem;
 }
 
-header > nav > ul {
+.nav-list {
     height: 100%;
     width: 100%;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-header > nav > ul > li {
-    height: 100%;
-}
-
-header > nav > ul > li > a {
-    height: 100%;
-
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 6rem;
+    list-style: none;
+}
 
+.nav-item {
+    height: 100%;
+    position: relative;
+}
+
+.nav-item::after {
+    height: 3px;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: "";
+    color: #3FCEF6;
+    border-bottom: 3px solid #3FCEF6;
+    transition: width 0.3s ease;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+}
+
+.nav-link {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     color: #FFF;
-
+    font-size: 1.4rem;
+    font-weight: 500;
     transition: 0.3s;
 }
 
-header > nav > ul > li > a:hover {
+.nav-link:hover {
     color: #3FCEF6;
-    border-bottom: 3px solid #3FCEF6;
 }
 
-section#inicio {
-    height: 650px;
+#home {
+    height: 60rem;
     width: 100%;
-
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: left;
-
     background-image: url(../imagens/clinica.jpg);
     background-size: cover;
     background-position: center;
@@ -88,157 +104,143 @@ section#inicio {
     background-attachment: fixed;
 }
 
-section#inicio > div.textContainer {
-    width: 800px;
-    margin-left: 10%;
+.home-content {
+    width: 80rem;
+    position: absolute;
+    top: 16rem;
+    left: 14rem;
+    text-shadow: 3px 3px 10px #3fcef697;
 }
 
-section#inicio > div.textContainer > h1 {
-    font-size: 3em;
+.home-content h1 {
+    margin-bottom: 1rem;
+    font-size: 5rem;
     color: #225A76;
 }
 
-section#inicio > div.textContainer > p {
-    font-size: 1.2em;
+.home-content p {
+    font-size: 2rem;
     font-weight: 500;
     text-align: justify;
     color: #225A76;
 }
 
-section#especialidades {
+#especialidades {
     width: 100%;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-section#especialidades > h2 {
+#especialidades h2 {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
     color: #225A76;
-    font-size: 1.7em;
-    margin-top: 40px;
-    margin-bottom: 10px;
+    font-size: 2.5rem;
 }
 
-section#especialidades > hr {
-    background-color: #3FCEF6;
-    height: 4px;
-    width: 70px;
+#especialidades hr {
+    height: 0.3rem;
+    width: 7rem;
     border: none;
-    margin-bottom: 20px;
+    background-color: #3FCEF6;
 }
 
-
-section#especialidades > div.cardContainer {
+.card-container {
+    height: auto;
     width: 100%;
-
+    margin: 3rem 5rem;
     display: grid;
-    grid-template-columns: repeat(4, 300px);
-    grid-template-rows: repeat(4, 110px);
-    gap: 10px;
+    grid-template-columns: repeat(4, 30rem);
+    grid-template-rows: repeat(4, 11rem);
+    gap: 1rem;
     justify-content: center;
-    align-items: center;
-
-
-    /*
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    */
-
-    margin-bottom: 50px;
+    align-items: center; 
 }
 
-section#especialidades > div.cardContainer > a {
+.card-container a {
     text-decoration: none;
     color: #225A76;
 }
 
-section#especialidades > div.cardContainer > a > div.card {
-    height: 100px;
-
+.card {
+    height: 10rem;
     display: flex;
     align-items: center;
     justify-content: left;
-
     background-color: #EFF1F3;
     border: 1px solid #225A76;
-    border-radius: 20px;
+    border-radius: 2rem;
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.312);
-
     transition: 0.3s;
 }
 
-section#especialidades > div.cardContainer > a > div.card:hover {
-    transform: translateY(-5px);
+.card:hover {
+    transform: translateY(-0.5rem);
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.485);
 }
 
-section#especialidades > div.cardContainer > a > div.card > div.cardIcon {
+.card-icon-container {
     height: 100%;
-    width: 90px;
-
+    width: 9rem;
     display: flex;
     align-items: center;
     justify-content: center;    
 }
 
-section#especialidades > div.cardContainer > a > div.card > div.cardIcon > img {
-    height: 30px;
+.card-icon-container img {
+    height: 4rem;
+    width: 4rem;
 }
 
-section#especialidades > div.cardContainer > a > div.card > div.cardText {
+.card-text-container {
     height: 100%;
-
     display: flex;
     align-items: center;
-    justify-content: left;  
+    justify-content: left;
+    font-size: 1.5rem;  
 }
 
-section#localizacao {
+#localizacao {
     width: 100%;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     background-color: #d7f2f7;
 }
 
-section#localizacao > h2 {
-    font-size: 1.7em;
+#localizacao h2 {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
     color: #225A76;
-    margin-top: 40px;
-    margin-bottom: 10px;
 }
 
-section#localizacao > hr {
-    background-color: #3FCEF6;
-    height: 4px;
-    width: 70px;
+#localizacao hr {
+    height: 0.3rem;
+    width: 7rem;
     border: none;
-    margin-bottom: 30px;
+    background-color: #3FCEF6;
 }
 
-section#localizacao > p {
-    margin-bottom: 30px;
-    font-size: 1.1em;
+#localizacao p {
+    margin: 3rem 0;
+    font-size: 1.8rem;
 }
 
-section#localizacao > div.mapContainer {
-    width: 1000px;
-    height: 300px;
-    margin-bottom: 50px;
+.map-container {
+    height: 30rem;
+    width: 80%;
+    margin-bottom: 5rem;
     border: 2px solid #225A76;
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.288);
     border-radius: 20px;
     overflow: hidden;
 }
 
-section#localizacao > div.mapContainer > iframe {
+.map-container iframe {
     height: 100%;
     width: 100%;
     border: none;
@@ -246,44 +248,39 @@ section#localizacao > div.mapContainer > iframe {
 
 footer {
     width: 100%;
-
-    padding-top: 50px;
-
+    padding-top: 5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     background-color: #225A76;
 }
 
-footer > div.footerContent {
+.footer-content {
     width: 100%;
-
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10rem;
 }
 
-footer > div.footerContent > div.logoContainer {
+.footer-logo-container {
     height: 100%;
-    width: 500px;
+    width: 50rem;
 
     display: flex;
     justify-content: right;
     align-items: center;
 }
 
-footer > div.footerContent > div.logoContainer > img {
-    height: 120px;
-    margin-right: 50px;
+.footer-logo-container img {
+    height: 11rem;
+    width: 28rem;
 }
 
-footer > div.footerContent > div.infoContainer {
+.footer-info-container {
     height: 100%;
-    width: 500px;
-
-    padding-left: 50px;
+    width: 50rem;
 
     display: flex;
     flex-direction: column;
@@ -291,33 +288,35 @@ footer > div.footerContent > div.infoContainer {
     align-items: flex-start;
 }
 
-footer > div.footerContent > div.infoContainer > h2 {
-    font-size: 1.7em;
+.footer-info-container h2 {
+    font-size: 2.5rem;
     color: #FFF;
-    margin-bottom: 5px;
+    margin-bottom: 0.5rem;
 }
 
-footer > div.footerContent > div.infoContainer > hr {
+.footer-info-container hr {
     background-color: #3FCEF6;
-    height: 4px;
-    width: 50px;
+    height: 0.3rem;
+    width: 5rem;
     border: none;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 
-footer > div.footerContent > div.infoContainer > ul {
+.footer-info-container ul {
     list-style-type: none;
     color: #FFF;
+    font-size: 1.6rem;
 }
 
-footer > div.footerContent > div.infoContainer > h3 {
-    margin-top: 20px;
+.footer-info-container h3 {
+    margin-top: 2rem;
     color: #FFF;
+    font-size: 1.8rem;
 }
 
 
-footer > div.footerContent > div.infoContainer > div.redesSociais {
-    margin-top: 5px;
+.social-media {
+    margin-top: 0.5rem;
     
     display: flex;
     align-items: center;
@@ -325,137 +324,62 @@ footer > div.footerContent > div.infoContainer > div.redesSociais {
     
 }
 
-footer > div.footerContent > div.infoContainer > div.redesSociais > a {
-    height: 30px;
-    margin-right: 10px;
+.social-media a {
+    height: 3rem;
+    margin-right: 1rem;
     overflow: hidden;
 }
 
-footer > div.footerContent > div.infoContainer > div.redesSociais > a > img {
+.social-media img {
     max-height: 100%;
     max-width: 100%;
     cursor: pointer;
 }
 
-footer > div.creditos {
+.credits {
     width: 100%;
-    margin-top: 30px;
-    padding: 10px;
+    margin-top: 3rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     color: #FFF;
     text-align: center;
 }
 
-footer > div.creditos > small {
-    font-size: 0.7em;
+.credits hr {
+    height: 1px;
+    width: 90%;
+    border: none;
+    background-color: #FFF;
 }
 
-a.whatsappButton {
+.credits a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #FFF;
+}
+
+.whatsapp-button {
+    width: 5rem;
+    height: 5rem;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    z-index: 1000;  
-
-    overflow-y: hidden;
+    z-index: 1000;
+    bottom: 2rem;
+    right: 2rem; 
 }
 
-a.whatsappButton > img {
+.whatsapp-button img {
     width: 100%;
     height: auto;
 }
 
-@media (max-width: 768px) {
+@media screen and (min-width: 720px) and (max-width: 1280px) {
 
-    header {
-        height: 60px;
+    html {
+        font-size: 40%;
     }
-
-    header > a > img.hlogo {
-        height: 50px;
-    }
-
-    header > nav {
-        display: none;
-    }
-
-    section#inicio {
-        justify-content: center;
-        height: 450px;
-    }
-
-    section#inicio > div.textContainer {
-        max-width: 90vw;
-        margin-left: 0;
-        margin-top: 20px;
-    }
-
-    section#inicio > div.textContainer > h1 {
-        margin-bottom: 10px;
-        font-size: 2.5em;
-    }
-
-    section#inicio > div.textContainer > p {
-        font-size: 1em;
-    }
-
-    section#especialidades > h2 {
-        margin-top: 30px;
-        font-size: 1.5em;
-    }
-
-    section#especialidades > div.cardContainer {
-        margin-bottom: 30px;
-    }
-
-    section#especialidades > div.cardContainer > a > div.card {
-        height: 60px;
-        width: 90vw;
-        margin: 5px 0px;
-    }
-
-    section#localizacao > h2 {
-        margin-top: 30px;
-        font-size: 1.5em;
-    }
-
-    section#localizacao > p {
-        max-width: 90%;
-        font-size: 1em;
-        text-align: center;
-    }
-
-    section#localizacao > div.mapContainer {
-        width: 90%;
-        margin-bottom: 30px;
-    }
-
-    footer {
-        padding-top: 0px;
-    }
-
-    footer > div.footerContent {
-        flex-direction: column;
-    }
-
-    footer > div.footerContent > div.logoContainer {
-        display: none;
-    }
-
-    footer > div.footerContent > div.infoContainer {
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        padding-left: 0;
-
-    }
-
-    footer > div.footerContent > div.infoContainer > h2 {
-        margin-top: 30px;
-    }
-
-    footer > div.footerContent > div.infoContainer > ul {
-        text-align: center;
-    }
-    
 }
+
